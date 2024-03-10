@@ -1,0 +1,6 @@
+# ninja log v5
+4	227	1710080252234027591	CMakeFiles/project2.dir/main.cpp.o	cab295ebb1c01409
+227	256	1710080252263994845	project2	30907e2ef6c126e0
+4	45	1710080252053413401	CMakeFiles/project2.dir/Industrial/Industrial.cpp.o	c9ede36b1e274627
+5	45	1710080252053343693	CMakeFiles/project2.dir/Residential/Residential.cpp.o	c72e8e7b34ea5e8
+4	45	1710080252053337109	CMakeFiles/project2.dir/Commercial/Commercial.cpp.o	e908f9af031bfb71

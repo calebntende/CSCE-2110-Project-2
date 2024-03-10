@@ -1,0 +1,6 @@
+
+
+#ifndef PROJECT2_CELL_H
+#define PROJECT2_CELL_H
+
+#endif //PROJECT2_CELL_H
