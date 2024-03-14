@@ -1,10 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <sstream>
+#include "Cell.h"
+#include "../Functions/Functions.h"
 
 using namespace std;
 
-void OpenFile(ifstream &fin, string &filename, int &Timesteps, int &Refreshrate, int &Timecounter, vector<string> &fileplaceholdervalues);
+
 
 int main()
 {
@@ -18,29 +21,26 @@ int main()
         exit(0);
     }
 
+
+
      int TimeSteps;
      int RefreshRate;
      int TimeCounter;
      vector<string> fileplaceholder;
-
-    
-    cout << "Hello, World!" << endl;
+     OpenFile(fin,filename,TimeSteps,RefreshRate,fileplaceholder);
+     cout << "filename: " <<filename << endl;
+     cout << "Timelimit: " << TimeSteps << endl;
+     cout << "Refreshrate: " << RefreshRate << endl;
+     vector<vector<Cell> >date ;
+     ifstream regionfile;
+        string line;
+        int numRows = 0;
+        int maxCols = 0;
+        string filename2;
+        vector<vector<Cell> > region;
+        GetRowsAndColumns(region,regionfile,line,numRows,maxCols,filename);
+        cout << "Number of rows: " << numRows << endl;
+        cout << "Number of columns: " << maxCols << endl;
     return 0;
 }
 
-void OpenFile(ifstream &fin, string &filename, int &Timesteps, int &Refreshrate, int &Timecounter, vector<string> &fileplaceholdervalues)
-{
-    string tempvalues;
-
-    while (!(fin.eof()))
-    {
-        getline(fin, tempvalues, ':');
-        fin >> tempvalues;
-        fileplaceholdervalues.push_back(tempvalues);
-    }
-
-    filename = fileplaceholdervalues.at(0);
-    Timesteps = stoi(fileplaceholdervalues.at(1));
-    Refreshrate = stoi(fileplaceholdervalues.at(2));
-    fin.close();
-}

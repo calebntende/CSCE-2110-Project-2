@@ -73,6 +73,12 @@ build CMakeFiles/project2.dir/Residential/Residential.cpp.o: CXX_COMPILER__proje
   OBJECT_DIR = CMakeFiles/project2.dir
   OBJECT_FILE_DIR = CMakeFiles/project2.dir/Residential
 
+build CMakeFiles/project2.dir/Functions/Functions.cpp.o: CXX_COMPILER__project2_unscanned_Debug /Users/dorothyntende/Desktop/CSCE$ 2110/project2/Functions/Functions.cpp || cmake_object_order_depends_target_project2
+  DEP_FILE = CMakeFiles/project2.dir/Functions/Functions.cpp.o.d
+  FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.2 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/project2.dir
+  OBJECT_FILE_DIR = CMakeFiles/project2.dir/Functions
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target project2
@@ -81,7 +87,7 @@ build CMakeFiles/project2.dir/Residential/Residential.cpp.o: CXX_COMPILER__proje
 #############################################
 # Link the executable project2
 
-build project2: CXX_EXECUTABLE_LINKER__project2_Debug CMakeFiles/project2.dir/Main/main.cpp.o CMakeFiles/project2.dir/Commercial/Commercial.cpp.o CMakeFiles/project2.dir/Industrial/Industrial.cpp.o CMakeFiles/project2.dir/Residential/Residential.cpp.o
+build project2: CXX_EXECUTABLE_LINKER__project2_Debug CMakeFiles/project2.dir/Main/main.cpp.o CMakeFiles/project2.dir/Commercial/Commercial.cpp.o CMakeFiles/project2.dir/Industrial/Industrial.cpp.o CMakeFiles/project2.dir/Residential/Residential.cpp.o CMakeFiles/project2.dir/Functions/Functions.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.2
   OBJECT_DIR = CMakeFiles/project2.dir
   POST_BUILD = :

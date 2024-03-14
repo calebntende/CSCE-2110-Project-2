@@ -7,4 +7,6 @@ add_executable(project2 Main/main.cpp
         Commercial/Commercial.cpp
         Industrial/Industrial.cpp
         Residential/Residential.cpp
-        Main/Cell.h)
+        Main/Cell.h
+        Functions/Functions.h
+        Functions/Functions.cpp)
