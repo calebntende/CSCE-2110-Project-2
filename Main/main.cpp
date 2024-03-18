@@ -20,8 +20,6 @@ int main()
 {
 
     ifstream fin;
-    cout <<"test\n";
-
     string filename="config1.txt";
     fin.open(filename);
     if(fin.fail())
