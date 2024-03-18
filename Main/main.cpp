@@ -44,7 +44,7 @@ int main()
         GetRowsAndColumns(region,regionfile,line,numRows,maxCols,filename);
 
 
-cout << "initial region\n";
+cout << "initial region \n";
 
 
         for(int i=0; i<region.size(); i++)
