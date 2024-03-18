@@ -20,6 +20,7 @@ int main()
 {
 
     ifstream fin;
+
     string filename="config1.txt";
     fin.open(filename);
     if(fin.fail())
