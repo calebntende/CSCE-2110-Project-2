@@ -5,6 +5,8 @@
 
 
 class Residential {
+public:
+
 
 };
 
