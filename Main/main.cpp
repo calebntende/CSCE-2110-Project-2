@@ -41,7 +41,7 @@ int main()
     fin.open(filename);
     if(fin.fail())
     {
-        cout << "file not found\n";
+        cout << "file not found 3422342\n";
         exit(0);
     }
      int TimeSteps;

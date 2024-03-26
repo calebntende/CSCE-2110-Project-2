@@ -1,20 +1,28 @@
-project2: /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Main/main.o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Residential/Residential.o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Functions/Functions.o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Commercial/Commercial.o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Industrial/Industrial.o
-	g++ /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Main/main.o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Residential/Residential.o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Functions/Functions.o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Commercial/Commercial.o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Industrial/Industrial.o -o project2
+# specify the compiler
+CC=g++ 
 
-/nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Main/main.o: /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Main/main.cpp
-	g++ -c /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Main/main.cpp -o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Main/main.o
+# specify options for the compiler
+CFLAGS=-c -Wall
 
-/nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Residential/Residential.o: /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Residential/Residential.cpp
-	g++ -c /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Residential/Residential.cpp -o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Residential/Residential.o
+all: project
 
-/nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Functions/Functions.o: /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Functions/Functions.cpp
-	g++ -c /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Functions/Functions.cpp -o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Functions/Functions.o
+project: Main/main.o Commercial/Commercial.o Residential/Residential.o Functions/Functions.o Industrial/Industrial.o
+	$(CC) Main/main.o Commercial/Commercial.o Residential/Residential.o Functions/Functions.o Industrial/Industrial.o -o project
 
-/nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Commercial/Commercial.o: /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Commercial/Commercial.cpp
-	g++ -c /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Commercial/Commercial.cpp -o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Commercial/Commercial.o
+Main/main.o: Main/main.cpp
+	$(CC) $(CFLAGS) Main/main.cpp -o Main/main.o
 
-/nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Industrial/Industrial.o: /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Industrial/Industrial.cpp
-	g++ -c /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Industrial/Industrial.cpp -o /nfs/home/STUDENTS/cmn0136/Project\ 2/CSCE-2110-Project-2/Industrial/Industrial.o
+Commercial/Commercial.o: Commercial/Commercial.cpp
+	$(CC) $(CFLAGS) Commercial/Commercial.cpp -o Commercial/Commercial.o
+
+Residential/Residential.o: Residential/Residential.cpp
+	$(CC) $(CFLAGS) Residential/Residential.cpp -o Residential/Residential.o
+
+Functions/Functions.o: Functions/Functions.cpp
+	$(CC) $(CFLAGS) Functions/Functions.cpp -o Functions/Functions.o
+
+Industrial/Industrial.o: Industrial/Industrial.cpp
+	$(CC) $(CFLAGS) Industrial/Industrial.cpp -o Industrial/Industrial.o
 
 clean:
-	rm -f *.o
+	rm -rf *o project Main/*.o Commercial/*.o Residential/*.o Functions/*.o Industrial/*.o
