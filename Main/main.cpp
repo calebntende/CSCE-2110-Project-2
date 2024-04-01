@@ -35,6 +35,7 @@ void checkAdjacentCells(int x, int y, vector<vector<Cell> > &region) {
 
 int main()
 {
+    cout <<"ello\n";
 
     ifstream fin;
     string filename="config1.txt";
