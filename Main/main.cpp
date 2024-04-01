@@ -48,7 +48,7 @@ int main()
      int RefreshRate;
      vector<string> fileplaceholder;
      OpenFile(fin,filename,TimeSteps,RefreshRate,fileplaceholder);
-     cout << "filename: " <<filename << endl;
+     cout << "name of the file filename: " <<filename << endl;
      cout << "TimeSteps: " << TimeSteps << endl;
      cout << "Refreshrate: " << RefreshRate << endl;
      vector<vector<Cell> >date,copy ;
