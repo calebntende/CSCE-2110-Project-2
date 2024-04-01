@@ -41,7 +41,7 @@ int main()
     fin.open(filename);
     if(fin.fail())
     {
-        cout << "file not found2 343\n";
+        cout << "config file not found\n";
         exit(0);
     }
      int TimeSteps;
